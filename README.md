@@ -1,7 +1,7 @@
 # FinalIntroPythonProject
 
 Pokemon Pokedex
-
+![Pokemon](Screen Shot 2025-05-16 at 10.29.25 PM.png)
 
 Final Project (Due on Friday of week 17 for everyone) 
 Intro & Objectives
