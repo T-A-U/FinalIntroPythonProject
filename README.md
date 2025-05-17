@@ -1,4 +1,8 @@
 # FinalIntroPythonProject
+
+Pokemon Pokedex
+
+
 Final Project (Due on Friday of week 17 for everyone) 
 Intro & Objectives
 
@@ -9,3 +13,4 @@ You must use:
     The WWW API to search the web
     Tkinter to build a GUI (alternatively you can use Django to build a website)
     sqlite3 to build the database
+    
