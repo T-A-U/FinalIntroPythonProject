@@ -7,9 +7,9 @@ This module defines a function to scrape basic Pokémon data
 (HP, Attack, Defense, Type, and Abilities) from https://pokemondb.net.
 """
 
-import requests  # To make HTTP requests to the website
-from bs4 import BeautifulSoup  # To go through the html content # To parse and navigate HTML content
-import re  # To extract numbers using regular expressions
+import requests  # To make HTTP requests to the website-Requests
+from bs4 import BeautifulSoup  # To go through the html content # To parse and navigate HTML content-Beautiful soup
+import re  # To extract numbers using regular expressions -Regular expressions.
 #These imports are what are used to scrape from the website
 
 def scrape_pokemon_data(name):
