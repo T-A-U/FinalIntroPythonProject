@@ -3,6 +3,20 @@
 Pokemon Pokedex
 ![Pokemon](PokemonLogo.png)
 
+
+### Download dependencies:
+`pip install requests beautifulsoup4`
+
+### In your VS Code Terminal (or any terminal) run the project:
+`python main.py`
+
+
+
+
+
+
+
+### Project Guidelines from Professor:
 Final Project (Due on Friday of week 17 for everyone) 
 Intro & Objectives
 
