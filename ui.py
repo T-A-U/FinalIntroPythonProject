@@ -21,6 +21,7 @@ def start_app():
         This function is called when the user clicks the Search button.
         It checks if the Pokémon is in the database.
         If not, it will try to get info from the website.
+        Checks if pokemon is in database and downloads info from website if not, on search.
         """
         name = entry.get().strip()  # Get what the user typed
         if name == "":
@@ -30,7 +31,7 @@ def start_app():
         data = get_pokemon_from_db(name)  # Try to find Pokémon in the database
 
         if not data:
-            data_dict = scrape_pokemon_data(name)  # Try to scrape from the website
+            data_dict = scrape_pokemon_data(name)  # Try to scrape from the website if cant find pkmn in database
             if data_dict:
                 save_pokemon_to_db(data_dict)  # Save new info into the database
                 data = (
@@ -52,7 +53,7 @@ def start_app():
 
     def show_data(info):
         """
-        This function shows the Pokémon info on the screen.
+        This function shows the Pokémon info on the screen. Its stats like attack.
         """
         output.delete("1.0", tk.END)  # Clear previous text
         labels = ["Name", "Type(s)", "HP", "Attack", "Defense", "Abilities"]
@@ -64,7 +65,7 @@ def start_app():
     window.title("Pokémon Info App")#Give the app a title
     window.configure(bg="#FFCC00")  # Pokémon-style background (like Pikachu)
 
-    # Load and display logo image
+    # Load and display logo image, resized from original dimension to fit within the window of the app. Colors the logo and gives it padding as well, if something goes wrong it throws an error.
     try:
         logo_image = PhotoImage(file="pokemon-logo.png")  # Found in stack overflow as a fix to get imge to show up # Show logo which is saved in the repository (or folder if local) and resize image to 1/8 it's original size (originally huge)
         logo_image = logo_image.subsample(8, 8)  # Resize image to about 1/8x smaller than original big size
@@ -74,13 +75,13 @@ def start_app():
     except Exception as e: #If something goes wrong, print the below error
         print("Could not load logo image:", e)
 
-    # Add label and input box
+    # Add label and input box, styles it as well
     tk.Label(window, text="WELCOME TO THE POKEMON POKEDEX!", bg="#FFCC00", font=("Arial", 12, "bold")).pack(pady=5) #Create label for user input box
     tk.Label(window, text="Enter the name of your favorite pokemon, press 'Search'", bg="#FFCC00", font=("Arial", 12, "bold")).pack(pady=5)
     entry = tk.Entry(window) #Code for Actual inut box in Tkinter
     entry.pack(pady=5)#Aligns vertical using .pack() and adds 5 pixels above and below
 
-    # Add search button
+    # Add search button with style
     tk.Button(window, text="Search", command=search, bg="#FF0000", fg="blue", font=("Arial", 10, "bold")).pack(pady=5) #Design the Search button with blue words fg="blue"
 
     # Add a text area to show results
