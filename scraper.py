@@ -10,6 +10,7 @@ This module defines a function to scrape basic Pokémon data
 import requests  # To make HTTP requests to the website
 from bs4 import BeautifulSoup  # To go through the html content # To parse and navigate HTML content
 import re  # To extract numbers using regular expressions
+#These imports are what are used to scrape from the website
 
 def scrape_pokemon_data(name):
     """
