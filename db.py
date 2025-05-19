@@ -6,7 +6,7 @@ Date: May 2025
 
 import sqlite3  # This lets us use SQLite in Python
 
-# Name of the file where our database will be stored
+# Name of the file where our database will be stored, generated once application is ran.
 DB_NAME = "pokemon.db"
 
 def init_db():
