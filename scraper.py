@@ -26,7 +26,7 @@ def scrape_pokemon_data(name):
         dict: A dictionary with keys 'name', 'types', 'hp', 'attack', 'defense', 'abilities'.
               Returns None if the webpage cannot be accessed or if te data can't be parsed.
 
-       Basically given the pokemon the user searches for it gives the name and various attributes like Hp, attack, etc, the name of the pokemon you search is given in string format else it gives none if you it cant find the pokemon searched or cant parse the data.
+       Basically given the pokemon the user searches for it gives the name and various attributes like Hp, attack, etc, the name of the pokemon you search is given in string format else it gives none if it cant find the pokemon searched or cant parse the data.
     """
     # This the URL for the Pokémon's page - the latter part is taking the name of the pokemon the user inseerted and making it lowercase
     url = f"https://pokemondb.net/pokedex/{name.lower()}"
